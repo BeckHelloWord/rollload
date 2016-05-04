@@ -8,6 +8,9 @@ var myFun = {
     paly: function () {
         var timer;
         $(window).on("scroll", function () {
+            console.log("可视窗口高度："+$(window).height());
+            console.log("文档高度："+$(document).height());
+            console.log("距离顶端："+$(document).scrollTop());
             if ($(document).scrollTop() >= $(document).height() - $(window).height()) {
                 $(".load-img").css("display", "block");
                 clearTimeout(timer);
